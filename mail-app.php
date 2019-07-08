@@ -10,15 +10,15 @@ if(isset($_POST['submit'])){
     $mail = new PHPMailer\PHPMailer\PHPMailer();
     
     //From email address and name
-    $mail->From = "info@aapscbsc.com";
-    $mail->FromName = "Kneecareindia";
+    $mail->From = "from@yourdomain.com";
+    $mail->FromName = "your name";
     
     //To address and name
-    $mail->addAddress("chennaimedinfo.in@gmail.com");
-    $mail->addAddress("vickydevu007@gmail.com"); //Recipient name is optional
+    $mail->addAddress("example@gmail.com", 'name');
+    $mail->addAddress("example@gmail.com"); //Recipient name is optional
     
     //Address to which recipient will reply
-    $mail->addReplyTo("info@aapscbsc.com", "Reply");
+    $mail->addReplyTo("examle@gmail.com", "Reply");
     
     //CC and BCC
     $mail->addCC("cc@example.com");

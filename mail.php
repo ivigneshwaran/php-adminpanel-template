@@ -6,15 +6,15 @@ if(isset($_POST['submit'])){
     $mail = new PHPMailer\PHPMailer\PHPMailer();
     
     //From email address and name
-    $mail->From = "info@aapscbsc.com";
-    $mail->FromName = "Kneecareindia";
+    $mail->From = "example@gmail.com";
+    $mail->FromName = "Name";
     
     //To address and name
-    $mail->addAddress("chennaimedinfo.in@gmail.com", "vicky");
-    $mail->addAddress("knee.news@gmail.com"); //Recipient name is optional
+    $mail->addAddress("example@gmail.com", "name");
+    $mail->addAddress("example@gmail.com", 'name'); //Recipient name is optional
     
     //Address to which recipient will reply
-    $mail->addReplyTo("info@aapscbsc.com", "Reply");
+    $mail->addReplyTo("example@gmail.com", "Reply");
     
     //CC and BCC
     $mail->addCC("cc@example.com");
@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     //Send HTML or Plain Text email
     $mail->isHTML(true);
     
-    $mail->Subject = "Enquiry From Kneecareindia.in";
+    $mail->Subject = "Enquiry From xyz";
     $mail->Body = "<html>
         <head>
             <title>HTML email</title>
